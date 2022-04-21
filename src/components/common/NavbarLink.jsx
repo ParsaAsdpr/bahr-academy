@@ -4,7 +4,7 @@ const NavbarLink = (props) => {
   return (
     <a
       href="#"
-      class="mx-3 lg:py-5 py-3 hover:border-b-2 border-indigo-500 hover:text-indigo-500 duration-75 md:block hidden text-sm lg:text-base"
+      class="float-right mx-5 lg:py-5 py-3 hover:border-b-2 border-indigo-500 hover:text-indigo-500 duration-75 md:block hidden text-sm lg:text-base"
     >
       {props.title}
     </a>
