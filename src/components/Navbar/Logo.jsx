@@ -3,13 +3,13 @@ import logo from "../../assets/images/logo.png";
 
 const Logo = () => {
   return (
-    <div className="float-right flex justify-between items-center">
+    <div className="float-right flex justify-between items-center cursor-pointer">
       <img
         src={logo}
         alt="logo"
-        className="w-10 h-10 block cursor-pointer"
+        className="w-10 h-10 block"
       />
-      <a className="text-gray-900 mx-3 text-lg cursor-pointer sm:inline hidden">
+      <a className="text-gray-900 mx-5 text-lg sm:inline hidden">
         آکادمی بحر
       </a>
     </div>
