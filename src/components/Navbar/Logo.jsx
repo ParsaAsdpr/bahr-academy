@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/Logo.png";
 
 const Logo = () => {
   return (
