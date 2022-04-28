@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Mask from "../components/common/mask";
-import SearchBox from "../components/Header/SearchBox";
-import HeaderTitle from "../components/Header/Title";
+import Mask from "../../components/common/mask";
+import SearchBox from "../../components/Header/SearchBox";
+import HeaderTitle from "../../components/Header/Title";
 
 class Header extends Component {
   state = {};
