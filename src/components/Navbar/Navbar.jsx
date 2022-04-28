@@ -7,6 +7,9 @@ import { TransparentButton } from "../common/TransparentButton";
 import { LinkButton } from "../common/LinkButton";
 import { Logo } from "../Navbar/Logo";
 import { MobileSign } from "./MobileSign";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+
 
 class Navbar extends Component {
   state = {
@@ -35,6 +38,7 @@ class Navbar extends Component {
             </h1>
             <div className="menu-icon" onClick={this.handleClick}>
               <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
+              <FontAwesomeIcon icon={clicked ? faTimes : faBars}></FontAwesomeIcon>
             </div>
             <ul className={clicked ? "nav-menu active" : "nav-menu"}>
               {MenuItems.map((item, index) => {
