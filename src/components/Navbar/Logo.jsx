@@ -3,7 +3,7 @@ import logo from "../../assets/images/logo.png";
 
 const Logo = () => {
   return (
-    <div className="float-right flex justify-between items-center cursor-pointer h-full">
+    <div className="float-right flex justify-between items-center cursor-pointer h-full lg:translate-x-0 translate-x-1/2">
       <img
         src={logo}
         alt="logo"
