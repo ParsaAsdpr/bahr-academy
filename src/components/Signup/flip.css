@@ -1,162 +1,233 @@
 * {
-    box-sizing: border-box;
-    color: black;
-    font-family: irsans;
-  }
-  .flip-container {
-    margin: 100px auto;
-  }
-  .card-container button:focus {
-    outline: none;
-  }
+  box-sizing: border-box;
+  color: black;
+  font-family: irsans;
+}
+.card-container button:focus {
+  outline: none;
+}
+.deck {
+  margin: 15px;
+  width: 400px;
+  height: 460px;
+  position: relative;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  font-family: verdana;
+  border-radius: 10px;
+}
+.sign-card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s ease-out;
+  border-radius: 10px;
+}
+.sign-card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.sign-card .back {
+  overflow: hidden;
+  z-index: -1;
+  display: block;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+}
+.sign-card .back:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: 100% 100%;
+}
+.sign-card .front,
+.sign-card .back {
+  transition: all 0.5s linear;
+}
+.sign-card .front {
+  z-index: 1;
+  box-shadow: 0px 0px 15px #1111112a;
+}
+.sign-card .back {
+  box-shadow: 0 0 15px #1111112a;
+}
+.flipped {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  height: 520px;
+}
+.flipped .front {
+  box-shadow: 0 0 15px #1111112a;
+}
+.flipped .back {
+  box-shadow: 0 0 15px #1111112a;
+}
+.rad-button {
+  border: 2px solid gray;
+  color: gray;
+  width: 90px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 110px;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+.rad-button:hover {
+  color: gray;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.return {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: gray;
+  cursor: pointer;
+  padding: 5px;
+  bottom: 0;
+  border-radius: 0 0 10px 10px;
+  background-color: darken(whitesmoke, 10%);
+  font-size: 18px;
+}
+.return:focus {
+  outline: none;
+}
+
+.card-container {
+  width: 80%;
+  margin: 30px auto;
+}
+.deck h2 {
+  color: #333333;
+  font-size: 24pt;
+  margin: 15px 0;
+}
+.deck p {
+  color: #969696;
+  font-size: 10.4pt;
+  margin: 20px 0;
+  line-height: 24px;
+}
+.deck input[type="text"] {
+  display: block;
+  color: #585858;
+  background-color: #f4f4f4;
+  padding: 14px 20px;
+  border-radius: 5px;
+  width: 100%;
+  margin: 13px 0;
+}
+.deck button {
+  width: 100%;
+  padding: 14px 0;
+  text-align: center;
+  background-color: #85a7e6;
+  color: #fff;
+  border-radius: 6px;
+  margin: 10px 0;
+  transition: 0.3s;
+}
+.deck button:hover {
+  background-color: #6589cd;
+}
+
+.deck a {
+  color: #4c75c2;
+  cursor: pointer;
+  font-size: 10pt;
+  line-height: 40px;
+}
+.deck a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
   .deck {
-    margin: 15px;
-    width: 400px;
-    height: 460px;
-    position: relative;
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
-    font-family: verdana;
-    border-radius: 10px;
+    width: 330px;
+    height: 350px;
   }
-  .sign-card {
-    width: 100%;
-    height: 100%;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transition: all 0.5s linear;
-    transition: all 0.5s ease-out;
-    border-radius: 10px;
+  .flipped {
+    height: 410px;
   }
-  .sign-card .face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    background-color: #fff;
-    border-radius: 10px;
+  .rad-button {
+    width: 80px;
+    bottom: 80px;
   }
-  .sign-card .back {
-    overflow: hidden;
-    z-index: -1;
-    display: block;
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    box-sizing: border-box;
+  .card-container {
+    width: 80%;
+    margin: 22px auto;
   }
-  .sign-card .back:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-size: 100% 100%;
+  .deck h2 {
+    font-size: 18pt;
+    margin: 10px 0;
+  }
+  .deck p {
+    font-size: 8pt;
+    margin: 10px 0;
+    line-height: 20px;
+  }
+  .deck input[type="text"] {
+    padding: 12px 20px;
+    margin: 10px 0;
+    font-size: 10pt;
+  }
+  .deck button {
+    padding: 10px 0;
+    margin: 7px 0;
+    font-size: 10pt;
+  }
+  .deck a {
+    font-size: 9pt;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .deck {
+    height: 310px;
   }
   .sign-card .front,
   .sign-card .back {
-    transition: all 0.5s linear;
+    transition: all 0 linear;
   }
-  .sign-card .front {
-    z-index: 1;
-    box-shadow: 0px 0px 15px #1111112a;
-  }
-  .sign-card .back {
-    box-shadow: 0 0 15px #1111112a;
+  .sign-card {
+    transition: 0;
   }
   .flipped {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    height: 520px;
-  }
-  .flipped .front {
-      box-shadow: 0 0 15px #1111112a;
-  }
-  .flipped .back {
-      box-shadow: 0 0 15px #1111112a;
-  }
-  .rad-button {
-    border: 2px solid gray;
-    color: gray;
-    width: 90px;
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    bottom: 110px;
-    -webkit-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-  }
-  .rad-button:hover {
-    color: gray;
-    background-color: rgba(255, 255, 255, 1);
-  }
-  
-  .return {
-    position: absolute;
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    color: gray;
-    cursor: pointer;
-    padding: 5px;
-    bottom: 0;
-    border-radius: 0 0 10px 10px;
-    background-color: darken(whitesmoke, 10%);
-    font-size: 18px;
-  }
-  .return:focus {
-    outline: none;
-  }
-  
-  .card-container {
-    width: 80%;
-    margin: 30px auto;
+    height: 360px;
   }
   .deck h2 {
-    color: #333333;
-    font-size: 24pt;
-    margin: 15px 0;
+    font-size: 16pt;
   }
-  .deck p{
-      color: #969696;
-      font-size: 10.4pt;
-      margin: 20px 0;
-      line-height: 24px;
+  .deck p {
+    font-size: 7.5pt;
   }
-  .deck input[type=text]{
-      display: block;
-      color: #585858;
-      background-color: #f4f4f4;
-      padding: 14px 20px;
-      border-radius: 5px;
-      width: 100%;
-      margin: 13px 0;
+  .deck input[type="text"] {
+    padding: 10px 15px;
+    font-size: 8.5pt;
   }
-  .deck button{
-      width: 100%;
-      padding: 14px 0;
-      text-align: center;
-      background-color: #85a7e6;
-      color: #fff;
-      border-radius: 6px;
-      margin: 10px 0;
-      transition: 0.3s;
+  .deck button {
+    padding: 8px 0;
+    font-size: 9pt;
   }
-  .deck button:hover{
-      background-color: #6589cd;
+  .deck a {
+    font-size: 8pt;
   }
-  
-  .deck a{
-      color: #4c75c2;
-      cursor: pointer;
-      font-size: 10pt;
-      line-height: 40px;
-  }
-  .deck a:hover{
-      text-decoration: underline;
-  }
+}
