@@ -9,7 +9,6 @@ function App() {
   return (
     <div dir='rtl'>
       <Navbar></Navbar>
-      <NotFound></NotFound>
     </div>
   );
 }
