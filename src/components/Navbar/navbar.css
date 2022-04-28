@@ -140,3 +140,8 @@ header {
         display: none;
     }
 }
+@media screen and (max-width: 962px) {
+  header .mobilesign{
+      display: block !important;
+  }
+}

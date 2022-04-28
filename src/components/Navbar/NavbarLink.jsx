@@ -5,7 +5,7 @@ const NavbarLink = (props) => {
   return (
     <a
       href={props.url}
-      className={props.cName}
+      className={`border-b md:border-gray-300 lg:border-0 ${props.cName}`}
     >
       {props.title}
     </a>
