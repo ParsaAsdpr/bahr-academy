@@ -50,8 +50,8 @@ class Footer extends Component {
     return (
       <footer className="w-full">
         <div className="w-full bg-gradient-to-r from-blue-400 to-violet-400">
-          <div className="max-w-7xl px-10 py-20 mx-auto flex relative">
-            <Newsletter></Newsletter>
+          <div className="max-w-7xl px-10 py-20 mx-auto relative grid gap-x-0 gap-y-8 grid-cols-2 sm:grid-cols-4 lg:grid-cols-7">
+            <Newsletter cName="col-span-2 sm:col-span-4 lg:col-span-2"></Newsletter>
             {footerItems.map((item, index) => {
               return (
                 <FooterListGroup key={index} title={item.title}>
@@ -68,16 +68,16 @@ class Footer extends Component {
                 </FooterListGroup>
               );
             })}
-            <FooterLogo></FooterLogo>
+            <FooterLogo cName="col-span-2 sm:col-span-4 lg:col-span-1"></FooterLogo>
           </div>
         </div>
         <div className="w-full px-20 py-10" style={{ background: "#6389CE" }}>
           <div className="max-w-7xl flex justify-between mx-auto">
-              <p className="text-white text-sm">تمامی حقوق محفوظ سایت متعلق به آکادمی بحر میباشد.</p>
+              <p className="text-white text-sm leading-loose">تمامی حقوق محفوظ سایت متعلق به آکادمی بحر میباشد.</p>
               <div>
                   {socials.map((social, index) => {
                       return(
-                          <a href="#" className={`text-white mx-5 cursor-pointer float-left`} key={index}>{social}</a>
+                          <a href="#" className={`text-white m-5 cursor-pointer float-left`} key={index}>{social}</a>
                       )
                   })}
               </div>
