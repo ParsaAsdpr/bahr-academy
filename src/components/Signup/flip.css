@@ -1,6 +1,8 @@
-* {
+.card-container * {
   box-sizing: border-box;
   color: black;
+}
+*{
   font-family: irsans;
 }
 .card-container button:focus {
