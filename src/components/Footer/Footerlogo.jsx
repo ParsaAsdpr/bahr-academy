@@ -1,11 +1,11 @@
 import React from 'react';
 import logopic from '../../assets/images/logo.png'
 
-const FooterLogo = () => {
+const FooterLogo = props => {
     return ( 
-        <div className='h-full w-1/12 absolute left-0'>
-            <img src={logopic} alt="" className='w-full' />
-            <h1 className='text-xl text-white w-full text-center font-bold mt-5'>آکادمی بحر</h1>
+        <div className={`h-full w-full flex justify-center flex-col ${props.cName}`}>
+            <img src={logopic} alt="" className='w-1/5 lg:w-4/5 mx-auto' />
+            <h4 className='text-xl text-white w-full text-center font-bold mt-5'>آکادمی بحر</h4>
         </div>
      );
 }

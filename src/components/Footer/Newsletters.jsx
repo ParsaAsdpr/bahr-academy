@@ -4,8 +4,8 @@ import { NewsletterText } from './textbox';
 
 const Newsletter = props => {
     return ( 
-        <form className='w-1/4 flex flex-wrap whitespace-nowrap justify-center ml-10'>
-            <h1 className='text-xl font-bold text-white w-full text-right mb-9'>عضویت در خبرنامه</h1>
+        <form className={`flex flex-wrap whitespace-nowrap justify-center ml-10 ${props.cName}`}>
+            <h3 className='text-xl font-bold text-white w-full text-right mb-9'>عضویت در خبرنامه</h3>
             <NewsletterText placeholder='نام شما'></NewsletterText>
             <NewsletterText placeholder='پست الکترونیک شما'></NewsletterText>
             <PrimaryButton text="عضویت در خبرنامه" url="#"></PrimaryButton>
