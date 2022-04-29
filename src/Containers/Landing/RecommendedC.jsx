@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { CourseCard } from "../../components/Courses/CourseCard";
 import reactpic from "../../assets/images/react.png";
+import { Title } from '../../components/common/Title';
 
 class RecCourses extends Component {
   state = {
@@ -38,9 +39,9 @@ class RecCourses extends Component {
   render() {
     const { courses } = this.state;
     return (
-      <section className="max-w-7xl mx-auto mb-5">
-          <h1 className="text-xl text-slate-800 font-bold p-3 md:p-7">دوره های پیشنهادی</h1>
-        <div className="w-full px-5 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="max-w-7xl mx-auto my-5">
+          <Title text="دوره های پیشنهادی"></Title>
+        <div className="w-full mt-5 px-5 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {courses.map((course, index) => {
             return (
               <CourseCard
