@@ -7,11 +7,13 @@ import Signup from './Containers/Signup/Signup';
 import Footer from './Containers/Footer/Footer';
 import RecCourses from './Containers/Landing/RecommendedC';
 import RecentArticles from './Containers/Landing/RecentArticles';
+import Advantages from './Containers/Advantages/Advantages';
 
 function App() {
   return (
     <div dir='rtl'>
       <Navbar></Navbar>
+      <Advantages></Advantages>
       <RecCourses></RecCourses>
       <RecentArticles></RecentArticles>
       <Footer></Footer>
