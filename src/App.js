@@ -7,7 +7,8 @@ import Signup from './Containers/Signup/Signup';
 import Footer from './Containers/Footer/Footer';
 import RecCourses from './Containers/Landing/RecommendedC';
 import RecentArticles from './Containers/Landing/RecentArticles';
-import Advantages from './Containers/Advantages/Advantages';
+import Advantages from './Containers/Landing/Advantages';
+import Tutors from './Containers/Landing/Tutors';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Navbar></Navbar>
       <Advantages></Advantages>
       <RecCourses></RecCourses>
+      <Tutors></Tutors>
       <RecentArticles></RecentArticles>
       <Footer></Footer>
     </div>
