@@ -8,6 +8,7 @@ import Footer from './Containers/Footer/Footer';
 import RecCourses from './Containers/Landing/RecommendedC';
 import RecentArticles from './Containers/Landing/RecentArticles';
 
+
 function App() {
   return (
     <div dir='rtl'>
