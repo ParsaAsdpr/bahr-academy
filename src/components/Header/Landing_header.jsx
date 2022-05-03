@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import SearchBox from './SearchBox';
+import '../../Containers/Landing/Header.css';
 
 class Landing_header extends Component {
   state = {};
 
   render() {
     return (
-      <div className="w-full bg-gray-900 px-44 py-14 h-[580px] .header-landing">
+      <div className=" w-full bg-gray-900 px-44 py-14 h-[580px] header-landing">
         <h1 className="text-[35px] text-sky-200 text-right header-title">
           خود آموزی سریع، کسب تجربه و ورود به بازار کار با هزینه کم با آکادمی ما
         </h1>
