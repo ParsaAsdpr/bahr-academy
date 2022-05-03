@@ -6,13 +6,14 @@ import Signup from './Containers/Signup/Signup';
 import Footer from './Containers/Footer/Footer';
 import Landing from './Containers/Landing/Landing';
 import Articles from './Containers/Blog/Articles';
+import Article from './Containers/Blog/Article';
 
 
 function App() {
   return (
     <div dir='rtl'>
       <Navbar></Navbar>
-      <Articles></Articles>
+      <Article></Article>
       <Footer></Footer>
     </div>
   );
