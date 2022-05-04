@@ -1,11 +1,10 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsDown } from '@fortawesome/free-solid-svg-icons';
+import {BsHandThumbsDown, BsHandThumbsDownFill} from "react-icons/bs"
 
 const Dislike = props => {
     return ( 
-        <div className={`flex flex-row gap-1 items-center cursor-pointer ${props.disliked ? "text-red-500" : "text-stone-800"   }`}>
-            <FontAwesomeIcon icon={faThumbsDown}></FontAwesomeIcon>
+        <div className='flex flex-row gap-1 items-center cursor-pointer text-red-500'>
+            {props.disliked ? <BsHandThumbsDownFill /> : <BsHandThumbsDown />}
             <span className='text-xs'>{props.count}</span>
         </div>
      );

@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { FaAngleDown } from "react-icons/fa";
 
 const SortButton = (props) => {
   const [ showOptions, setShowOptions ] = useState(false);
@@ -19,7 +18,7 @@ const SortButton = (props) => {
             hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
           >
             مرتب سازی بر اساس
-            <FontAwesomeIcon icon={faAngleDown}></FontAwesomeIcon>
+            <FaAngleDown />
           </button>
         </div>
 

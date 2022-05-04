@@ -1,6 +1,5 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { HiArrowNarrowLeft } from 'react-icons/hi';
 import "./Courses.css"
 
 const CourseCard = (props) => {
@@ -38,7 +37,7 @@ const CourseCard = (props) => {
         </p>
         <a className="text-white text-sm block overflow-hidden relative cursor-pointer transition-all registerCourse">
           مشاهده دوره و ثبت نام
-          <FontAwesomeIcon icon={faArrowLeft} className="px-2"></FontAwesomeIcon>
+          <HiArrowNarrowLeft className="px-2" />
         </a>
       </div>
     </div>
