@@ -1,5 +1,4 @@
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaSearch } from "react-icons/fa";
 import React from "react";
 
 const SearchBox = (props) => {
@@ -9,7 +8,7 @@ const SearchBox = (props) => {
         className="flex items-center text-white bg-gradient-to-br from-indigo-500 to-indigo-300 rounded-full absolute left-0 p-4 hover:px-7 duration-300"
         style={{ marginRight: "1px" }}
       >
-        <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
+        <FaSearch />
       </button>
       <input
         type="text"

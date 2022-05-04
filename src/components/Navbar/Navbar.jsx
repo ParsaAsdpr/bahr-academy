@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import "./navbar.css";
-import "@fortawesome/fontawesome-svg-core";
 import { NavbarLink } from "./NavbarLink";
 import { GradientBox } from "./Gradientbox";
 import { TransparentButton } from "../common/TransparentButton";
 import { LinkButton } from "../common/LinkButton";
 import { Logo } from "../Navbar/Logo";
 import { MobileSign } from "./MobileSign";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-
+import { RiCloseFill, RiMenu3Line} from "react-icons/ri"
 
 class Navbar extends Component {
   state = {
@@ -37,8 +34,7 @@ class Navbar extends Component {
               <Logo></Logo>
             </h1>
             <div className="menu-icon" onClick={this.handleClick}>
-              <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
-              <FontAwesomeIcon icon={clicked ? faTimes : faBars}></FontAwesomeIcon>
+              {clicked ? <RiCloseFill /> : <RiMenu3Line />}
             </div>
             <ul className={clicked ? "nav-menu active" : "nav-menu"}>
               {MenuItems.map((item, index) => {
