@@ -7,7 +7,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 const Footer = (props) => {
-  const { footerItems, setFooterItems } = useState([
+  const [ footerItems ] = useState([
     {
       title: "آکادمی",
       subItems: [

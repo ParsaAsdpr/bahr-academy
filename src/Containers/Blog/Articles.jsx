@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { ArticleCard } from '../../components/Blog/ArticleCard';
 import PageContainer from '../../components/common/PageContainer';
 import blog from "../../assets/images/blog.png"
 
-class Articles extends Component {
-    state = { 
-        items: [{text: "محبوب ترین ها", url:"#"},{text: "جدیدترین ها", url: "#"},],
-        // make an array from 1 to 20
-        array: Array.from(Array(20).keys()).map(i => i + 1),
-     } 
-    render() { 
-        const { items, array } = this.state;
+const Articles = () => {
+    const [items, setItems] = useState([
+        {text: "محبوب ترین ها", url:"#"},{text: "جدیدترین ها", url: "#"}
+    ])
+    const [array, setArray] = useState(Array.from(Array(20).keys()).map(i => i + 1))
+
         return (
             <PageContainer items={items} title="دوره های آموزشی">
                 {array.map((item, index) => {
@@ -21,6 +19,5 @@ class Articles extends Component {
             </PageContainer>
         );
     }
-}
  
 export default Articles;
