@@ -1,11 +1,10 @@
 import React from "react";
-import Attachment from "../common/Attachment";
 import Paragraph from "../common/Paragraph";
 import { Tag } from "../common/Tag";
 import { Title } from "../common/Title";
 import javascript from "../../assets/images/javascript.png";
 
-const Main = (props) => {
+const MainCourse = (props) => {
   return (
     <main>
       <div className="w-full overflow-hidden max-h-96 rounded-md">
@@ -26,14 +25,10 @@ const Main = (props) => {
         </div>
         <Paragraph text={props.desc}>
         </Paragraph>
-        <Attachment
-          image={javascript}
-          alt="جاوا اسکریپت چیست؟"
-          caption="تصویر جاوااسکریپت"
-        ></Attachment>
+          {props.children}
       </div>
     </main>
   );
 };
 
-export default Main;
+export default MainCourse;

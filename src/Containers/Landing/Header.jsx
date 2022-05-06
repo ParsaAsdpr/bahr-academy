@@ -3,9 +3,7 @@ import Mask from "../../components/common/mask";
 import SearchBox from "../../components/Header/SearchBox";
 import HeaderTitle from "../../components/Header/Title";
 
-class Header extends Component {
-  state = {};
-  render() {
+const Header = (props) => {
     return (
       <header className="flex justify-center w-full h-screen header-landing relative">
         <Mask cName="flex items-center flex-col flex-wrap whitespace-nowrap">
@@ -15,6 +13,5 @@ class Header extends Component {
       </header>
     );
   }
-}
 
 export { Header };
