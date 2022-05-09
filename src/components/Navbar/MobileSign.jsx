@@ -4,7 +4,7 @@ import "./navbar.css"
 
 const MobileSign = props => {
     return ( 
-        <div className="lg:hidden flex items-center mx-5 absolute top-0 left-0 translate-y-1/4">
+        <div className="mobileSign flex items-center mx-5 absolute top-0 left-0 translate-y-1/4">
         <p className="text-gray-700 text-xs float-left mx-3 username">مهمان</p>
         <img
           src={avatar}

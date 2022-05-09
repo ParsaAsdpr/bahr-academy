@@ -54,11 +54,23 @@ header {
   display: none;
   margin: 6px -17px 0 0;
 }
+.mobileSign{
+  display: none;
+}
+.navLogo{
+  transform: translateX(0);
+}
 
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
     justify-content: space-around;
+  }
+  .navLogo{
+    transform: translateX(50%);
+  }
+  .mobileSign{
+    display: flex;
   }
   .nav-menu {
     display: flex;
