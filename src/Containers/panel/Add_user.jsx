@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Dashboard from "../../components/panel/Dasboard";
+import Dashboard from "../../components/panel/Dashboard";
 import Header_panel from "../../components/panel/Header_panel";
 import "./Addstyle.css";
 class Add_user extends Component {
@@ -47,6 +47,13 @@ class Add_user extends Component {
         category: "کاربر",
         last_visit: "12 مهر",
       },
+      {
+        name: "mamad",
+        email: "mamad@yahoo.com",
+        status: "آنلاین",
+        category: "کاربر",
+        last_visit: "12 مهر",
+      }
     ],
   };
   render() {
