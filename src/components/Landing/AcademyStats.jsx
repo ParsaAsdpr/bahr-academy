@@ -13,12 +13,12 @@ const AcademyStats = props => {
     return ( 
         <section className={`w-full relative ${Style.statsBackground}`}>
             <div className={Style.mask}>
-                <div className='max-w-7xl mx-auto flex justify-around py-3 sm:py-5 md:py-12'>
+                <div className='max-w-7xl mx-auto flex justify-around py-3 sm:py-5 md:py-7'>
                     {stats.map((stat, index) => (
                         <div className='flex flex-col gap-1 sm:gap-3 md:gap-5' key={index}>
-                            <img src={stat.icon} alt="" className='w-16 sm:w-28 md:w-36'/>
-                            <h3 className='text-white text-center text-sm sm:text-md md:text-2xl'>{stat.title}</h3>
-                            <p className='text-white text-center text-sm sm:text-md md:text-2xl'>{stat.value}</p>
+                            <img src={stat.icon} alt="" className='w-14 sm:w-20 md:w-28'/>
+                            <h3 className='text-white text-center text-sm sm:text-md md:text-xl'>{stat.title}</h3>
+                            <p className='text-white text-center text-sm sm:text-md md:text-xl'>{stat.value.toLocaleString()}</p>
                         </div>
                     ))}
                 </div>

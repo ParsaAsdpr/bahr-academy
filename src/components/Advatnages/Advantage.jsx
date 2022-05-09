@@ -10,7 +10,7 @@ const Advantage = props => {
             </div>
             <div className='h-full'>
                 <h2 className='text-md sm:text-lg text-slate-800 p-3 font-bold'>{props.title}</h2>
-                <p className='text-xs sm:text-sm text-slate-500 px-3'>{props.desc}</p>
+                <p className='text-xs sm:text-sm text-slate-500 px-3 leading-loose'>{props.desc}</p>
             </div>
         </div>
      );
