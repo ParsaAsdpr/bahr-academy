@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PageContainer from "../../components/common/PageContainer";
-import { CourseCard } from "../../components/Courses/CourseCard";
+import CourseCard from "../../components/Courses/CourseCard";
 import { motion } from "framer-motion";
 import data from "../../core/services/api/courses.api";
 

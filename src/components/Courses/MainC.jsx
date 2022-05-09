@@ -1,7 +1,7 @@
 import React from "react";
 import Paragraph from "../common/Paragraph";
-import { Tag } from "../common/Tag";
-import { Title } from "../common/Title";
+import Tag from "../common/Tag";
+import Title from "../common/Title";
 import javascript from "../../assets/images/javascript.png";
 
 const MainCourse = (props) => {

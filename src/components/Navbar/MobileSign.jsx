@@ -15,4 +15,4 @@ const MobileSign = props => {
      );
 }
  
-export { MobileSign };
+export default MobileSign;

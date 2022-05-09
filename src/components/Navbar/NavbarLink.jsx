@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const NavbarLink = (props) => {
   return (
@@ -13,4 +13,4 @@ const NavbarLink = (props) => {
   );
 };
 
-export { NavbarLink };
+export default NavbarLink;

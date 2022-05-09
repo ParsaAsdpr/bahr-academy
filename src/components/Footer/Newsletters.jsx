@@ -1,6 +1,6 @@
 import React from 'react';
 import PrimaryButton from '../common/PrimaryButton';
-import { NewsletterText } from './textbox';
+import NewsletterText from './textbox';
 
 const Newsletter = props => {
     return ( 
@@ -13,4 +13,4 @@ const Newsletter = props => {
      );
 }
  
-export {Newsletter};
+export default Newsletter;

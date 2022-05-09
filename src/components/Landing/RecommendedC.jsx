@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { CourseCard } from "../../components/Courses/CourseCard";
+import CourseCard from "../../components/Courses/CourseCard";
 import reactpic from "../../assets/images/react.png";
-import { Title } from "../../components/common/Title";
+import Title from "../../components/common/Title";
 
 const RecCourses = (props) => {
   const [courses] = useState([

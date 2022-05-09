@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { FooterLogo } from "../../components/Footer/Footerlogo";
+import FooterLogo from "../../components/Footer/Footerlogo";
 import FooterListGroup from "../../components/Footer/Listgroup";
-import { Newsletter } from "../../components/Footer/Newsletters";
+import Newsletter from "../../components/Footer/Newsletters";
 import { BsTwitter, BsTelegram } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";

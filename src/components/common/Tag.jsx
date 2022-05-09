@@ -9,4 +9,4 @@ const Tag = props => {
      );
 }
  
-export {Tag};
+export default Tag;

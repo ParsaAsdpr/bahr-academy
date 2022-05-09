@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ArticleCard } from "../../components/Blog/ArticleCard";
+import ArticleCard from "../../components/Blog/ArticleCard";
 import PageContainer from "../../components/common/PageContainer";
 import { motion } from "framer-motion";
 import axios from "axios";

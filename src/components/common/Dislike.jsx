@@ -10,4 +10,4 @@ const Dislike = props => {
      );
 }
  
-export {Dislike};
+export default Dislike;

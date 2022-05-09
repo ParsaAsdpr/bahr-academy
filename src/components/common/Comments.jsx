@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Comment } from "../../components/common/Comment";
-import { Title } from "../../components/common/Title";
+import Comment from "../../components/common/Comment";
+import Title from "../../components/common/Title";
 
 const Comments = (props) => {
   return (

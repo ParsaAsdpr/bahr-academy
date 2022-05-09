@@ -11,4 +11,4 @@ const GradientBox = props => {
   );
 };
 
-export { GradientBox };
+export default GradientBox;

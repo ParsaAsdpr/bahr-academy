@@ -1,5 +1,6 @@
 import React from "react";
 import { HiArrowNarrowLeft } from 'react-icons/hi';
+import { Link } from "react-router-dom";
 import "./Courses.css"
 
 const CourseCard = (props) => {
@@ -30,18 +31,18 @@ const CourseCard = (props) => {
         </svg>
 
         <h3 className="text-white text-lg font-bold text-center pt-10 sm:pt-10 md:pt-8">
-          دوره React.js
+          {props.title}
         </h3>
         <p className=" md:leading-7 leading-7 text-xs opacity-80 text-white py-4 overflow-ellipsis overflow-hidden h-40">
           {props.desc}
         </p>
-        <a className="text-white text-sm block overflow-hidden relative cursor-pointer transition-all registerCourse">
+        <Link to={`/Course/${props.id}`} className="text-white text-sm block overflow-hidden relative cursor-pointer transition-all registerCourse">
           مشاهده دوره و ثبت نام
           <HiArrowNarrowLeft className="px-2" />
-        </a>
+        </Link>
       </div>
     </div>
   );
 };
 
-export { CourseCard };
+export default CourseCard;

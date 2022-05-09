@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Title } from "../common/Title";
+import Title from "../common/Title";
 import resume from "../../assets/images/resume.svg";
 import deaf from "../../assets/images/deaf.svg";
 import cash from "../../assets/images/cash.svg";

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import salar from "../../assets/images/salar.jpg";
-import { Title } from "../../components/common/Title";
+import Title from "../../components/common/Title";
 import TutorCard from "../../components/Tutors/TutorCard";
 
 const Tutors = () => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import articlePic from "../../assets/images/blog.png";
-import { ArticleCard } from "../../components/Blog/ArticleCard";
-import { Title } from "../../components/common/Title";
+import ArticleCard from "../../components/Blog/ArticleCard";
+import Title from "../../components/common/Title";
 
 const RecentArticles = (props) => {
   const [articles] = useState([

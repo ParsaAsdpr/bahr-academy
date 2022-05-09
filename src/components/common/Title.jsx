@@ -6,4 +6,4 @@ const Title = props => {
      );
 }
  
-export {Title};
+export default Title;

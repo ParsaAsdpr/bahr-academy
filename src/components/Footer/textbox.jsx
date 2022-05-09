@@ -6,4 +6,4 @@ const NewsletterText = props => {
      );
 }
  
-export {NewsletterText};
+export default NewsletterText;

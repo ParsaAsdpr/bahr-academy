@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Title } from "../../components/common/Title";
+import Title from "../../components/common/Title";
 import Share from "../../components/common/Share";
 import CourseInfo from "../../components/Courses/StatsNInfo";
 import MainCourse from "../../components/Courses/MainC";

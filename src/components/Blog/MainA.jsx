@@ -1,12 +1,12 @@
 import React from 'react';
 import Attachment from "../common/Attachment";
 import Paragraph from "../common/Paragraph";
-import { Tag } from "../common/Tag";
-import { Title } from "../common/Title";
+import Tag from "../common/Tag";
+import Title from "../common/Title";
 import javascript from "../../assets/images/javascript.png";
 import Profile from "../../components/Blog/Profile";
-import { Dislike } from "../../components/common/Dislike";
-import { Like } from "../../components/common/Like";
+import Dislike from "../../components/common/Dislike";
+import Like from "../../components/common/Like";
 import { AiFillEye } from "react-icons/ai";
 
 

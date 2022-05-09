@@ -10,4 +10,4 @@ const Like = props => {
      );
 }
  
-export {Like};
+export default Like;

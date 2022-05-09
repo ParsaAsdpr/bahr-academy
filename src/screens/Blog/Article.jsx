@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import javascript from "../../assets/images/javascript.png";
-import { Title } from "../../components/common/Title";
+import Title from "../../components/common/Title";
 import Attachment from "../../components/common/Attachment";
 import LinkR from "../../components/common/Link";
 import Share from "../../components/common/Share";

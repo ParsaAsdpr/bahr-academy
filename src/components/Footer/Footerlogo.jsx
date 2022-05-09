@@ -10,4 +10,4 @@ const FooterLogo = props => {
      );
 }
  
-export {FooterLogo};
+export default FooterLogo;

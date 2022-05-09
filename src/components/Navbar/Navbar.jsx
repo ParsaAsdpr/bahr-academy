@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./navbar.css";
-import { NavbarLink } from "./NavbarLink";
-import { GradientBox } from "./Gradientbox";
-import { TransparentButton } from "../common/TransparentButton";
-import { LinkButton } from "../common/LinkButton";
-import { Logo } from "../Navbar/Logo";
-import { MobileSign } from "./MobileSign";
+import NavbarLink from "./NavbarLink";
+import GradientBox from "./Gradientbox";
+import TransparentButton from "../common/TransparentButton";
+import LinkButton from "../common/LinkButton";
+import Logo from "../Navbar/Logo";
+import MobileSign from "./MobileSign";
 import { RiCloseFill, RiMenu3Line} from "react-icons/ri"
 
 const Navbar = props => {
@@ -46,7 +46,7 @@ const Navbar = props => {
       </div>
       <GradientBox>
         <TransparentButton title="ورود" path="/SignIn"></TransparentButton>
-         <LinkButton title="ثبت نام" path="/SignIn"></LinkButton>
+         <LinkButton title="ثبت نام" path="/SignUp"></LinkButton>
       </GradientBox>
     </nav>
   </header>
@@ -54,4 +54,4 @@ const Navbar = props => {
    );
 }
  
-export { Navbar };
+export default Navbar;
