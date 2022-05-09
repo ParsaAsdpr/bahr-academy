@@ -31,7 +31,7 @@ const Tutors = () => {
     },
   ]);
   return (
-    <section className="max-w-7xl mx-auto px-5">
+    <section className="max-w-7xl mx-auto px-5 my-12">
       <Title text="مدرسین"></Title>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 lg:gap-4">
         {tutors.map((tutor, index) => {

@@ -27,7 +27,7 @@ const RecentArticles = (props) => {
     },
   ]);
   return (
-    <section className="max-w-7xl mx-auto my-5">
+    <section className="max-w-7xl mx-auto my-10">
       <Title text="آخرین مقالات"></Title>
       <div className="px-5 mt-4 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {articles.map((article, index) => {

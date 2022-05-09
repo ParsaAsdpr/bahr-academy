@@ -1,0 +1,8 @@
+.statsBackground{
+    background: url('../../assets/images/programming.jpg') no-repeat center;
+    background-size: 100% auto;
+}
+
+.mask{
+    background-color: #7f7fd570;
+}

@@ -127,7 +127,7 @@
   margin: 20px 0;
   line-height: 24px;
 }
-.deck input[type="text"] {
+.deck input {
   display: block;
   color: #585858;
   background-color: #f4f4f4;
@@ -185,7 +185,7 @@
     margin: 10px 0;
     line-height: 20px;
   }
-  .deck input[type="text"] {
+  .deck input {
     padding: 12px 20px;
     margin: 10px 0;
     font-size: 10pt;
@@ -221,7 +221,7 @@
   .deck p {
     font-size: 7.5pt;
   }
-  .deck input[type="text"] {
+  .deck input {
     padding: 10px 15px;
     font-size: 8.5pt;
   }

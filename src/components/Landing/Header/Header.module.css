@@ -1,0 +1,24 @@
+.HeaderBackground {
+    background-image: url("../../../assets/images/bg.jpg");
+    background-size: 100% auto;
+}
+.mask{
+    background-color: #00000070;
+    height: 100%;
+}
+
+@media (max-width: 1256px) {
+    .HeaderBackground {
+        background-size: auto 100%;
+    }
+}
+
+@media (max-width: 768px){
+    .HeaderBackground {
+        background-image: none;
+        background: #fff;
+    }
+    .mask{
+        background: #fff;
+    }
+}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
-    <Link to="/" className="float-right flex justify-between items-center cursor-pointer h-full lg:translate-x-0 translate-x-1/2">
+    <Link to="/" className="navLogo float-right flex justify-between items-center cursor-pointer h-full">
       <img
         src={logo}
         alt="logo"
