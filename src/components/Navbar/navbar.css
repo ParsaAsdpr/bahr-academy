@@ -52,6 +52,7 @@ header {
 }
 .menu-icon {
   display: none;
+  margin: 6px -17px 0 0;
 }
 
 @media screen and (max-width: 960px) {

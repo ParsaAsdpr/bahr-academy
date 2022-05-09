@@ -7,13 +7,14 @@ import Footer from './Containers/Footer/Footer';
 import Landing from './Containers/Landing/Landing';
 import Articles from './Containers/Blog/Articles';
 import Article from './Containers/Blog/Article';
+import Course from './Containers/Course/Course';
 
 
 function App() {
   return (
     <div dir='rtl'>
       <Navbar></Navbar>
-      <Article></Article>
+      <Course></Course>
       <Footer></Footer>
     </div>
   );

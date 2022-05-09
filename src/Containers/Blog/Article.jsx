@@ -5,71 +5,70 @@ import { Like } from "../../components/common/Like";
 import { Tag } from "../../components/common/Tag";
 import { Title } from "../../components/common/Title";
 import { Dislike } from "../../components/common/Dislike";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
-import Attachment from "../../components/Blog/Attachment";
-import Paragraph from "../../components/Blog/Paragraph";
+import { AiFillEye } from "react-icons/ai";
+import Attachment from "../../components/common/Attachment";
+import Paragraph from "../../components/common/Paragraph";
 import { Comment } from "../../components/common/Comment";
 import LinkR from "../../components/common/Link";
-import Share from "../../components/Blog/Share";
+import Share from "../../components/common/Share";
 
 class Article extends Component {
   state = {
     article: {
       tags: ["برنامه نویسی", "جاوااسکریپت", "طراحی سایت", "javascript", "js"],
+      comments: [
+        {
+          name: "پارسا",
+          text: "👌",
+          image:
+            "https://i.pinimg.com/474x/dc/33/26/dc33269f24cbc2cf0fe3ecc27024e436.jpg",
+        },
+        {
+          name: "ممد",
+          text: "عالی بود",
+          image: "https://pbs.twimg.com/media/FCQddC_WYAEzxfA.jpg:large",
+        },
+        {
+          name: "امین",
+          text: ":)",
+          image:
+            "https://static.wikia.nocookie.net/af527d64-10e5-47dc-84c9-3691fa1cb744/scale-to-width/370",
+        },
+      ],
+      links: [
+        {
+          url: "#",
+          text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد",
+        },
+        {
+          url: "#",
+          text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد",
+        },
+        {
+          url: "#",
+          text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد",
+        },
+        {
+          url: "#",
+          text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد",
+        },
+        {
+          url: "#",
+          text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد",
+        },
+        {
+          url: "#",
+          text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد",
+        },
+        {
+          url: "#",
+          text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد",
+        },
+      ],
     },
-    comments: [
-      {
-        name: "پارسا",
-        text: "👌",
-        image:
-          "https://i.pinimg.com/474x/dc/33/26/dc33269f24cbc2cf0fe3ecc27024e436.jpg",
-      },
-      {
-        name: "ممد",
-        text: "عالی بود",
-        image: "https://pbs.twimg.com/media/FCQddC_WYAEzxfA.jpg:large",
-      },
-      {
-        name: "امین",
-        text: ":)",
-        image:
-          "https://static.wikia.nocookie.net/af527d64-10e5-47dc-84c9-3691fa1cb744/scale-to-width/370",
-      },
-    ],
-    links: [
-      {
-        url: "#",
-        text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد",
-      },
-      {
-        url: "#",
-        text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد",
-      },
-      {
-        url: "#",
-        text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد",
-      },
-      {
-        url: "#",
-        text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد",
-      },
-      {
-        url: "#",
-        text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد",
-      },
-      {
-        url: "#",
-        text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد",
-      },
-      {
-        url: "#",
-        text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد",
-      },
-    ],
   };
   render() {
-    const { article, comments, links } = this.state;
+    const { tags, comments, links } = this.state.article;
     return (
       <section className="max-w-7xl mx-auto p-0 md:p-7 overflow-hidden">
         <div className="md:grid md:grid-cols-3 gap-x-8">
@@ -89,7 +88,7 @@ class Article extends Component {
               <div className="my-6">
                 <h5 className="text-md text-stone-700">برچسب ها</h5>
                 <div className="mt-3">
-                  {article.tags.map((tag, index) => {
+                  {tags.map((tag, index) => {
                     return <Tag text={tag} key={index}></Tag>;
                   })}
                 </div>
@@ -106,7 +105,7 @@ class Article extends Component {
                       <Like count="0" liked={false}></Like>
                     </div>
                     <div className="flex flex-row gap-2 text-xs text-stone-500">
-                      <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+                      <AiFillEye />
                       1203
                     </div>
                   </div>

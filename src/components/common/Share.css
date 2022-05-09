@@ -15,7 +15,7 @@
 }
 .share-links {
     opacity: 0;
-    font-size: 9pt;
+    font-size: 15pt;
     color: #1F1E1E;
     will-change: transform;
     -webkit-transform: scale(.1);
@@ -23,7 +23,9 @@
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
     cursor: pointer;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .share-links:nth-of-type(4) {

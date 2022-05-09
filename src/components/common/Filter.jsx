@@ -1,5 +1,4 @@
-import { faFilter } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {FaFilter} from "react-icons/fa"
 import React from "react";
 
 const Filter = (props) => {
@@ -10,7 +9,7 @@ const Filter = (props) => {
        gap-6 items-center hover:text-white hover:bg-stone-400 transition-colors duration-200`}
     >
       فیلتر
-      <FontAwesomeIcon icon={faFilter}></FontAwesomeIcon>
+      <FaFilter />
 
     </div>
   );
