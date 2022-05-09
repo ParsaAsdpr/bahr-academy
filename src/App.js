@@ -7,14 +7,19 @@ import Footer from './Containers/Footer/Footer';
 import Landing from './Containers/Landing/Landing';
 import Articles from './Containers/Blog/Articles';
 import Article from './Containers/Blog/Article';
+import RecentArticles from './Containers/Landing/RecentArticles';
+import Tutors from './Containers/Landing/Tutors';
+import { CourseCard } from './components/Courses/CourseCard';
+import Dashboard from './components/panel/Dasboard';
+import Header_panel from './components/panel/Header_panel';
+import Add_user from './Containers/panel/Add_user';
+
 
 
 function App() {
   return (
     <div dir='rtl'>
-      <Navbar></Navbar>
-      <Article></Article>
-      <Footer></Footer>
+      <Add_user></Add_user>
     </div>
   );
 }

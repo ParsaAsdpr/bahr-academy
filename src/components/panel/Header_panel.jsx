@@ -9,7 +9,7 @@ class Header_panel extends Component {
   render() {
     return (
       <div className="relative">
-        <div className="w-[77%] h-16 border-b border-black border-opacity-5 text-[#636363] absolute left-0 top-0 flex justify-between active:border-none">
+        <div className="w-[1000px] h-16 border-b border-black border-opacity-5 text-[#636363] flex justify-between active:border-none">
           <span className="text-[22px] font-bold mt-3">افزودن کاربر</span>
           <div className="w-[42%] flex">
             <input
@@ -34,7 +34,7 @@ class Header_panel extends Component {
               ></label>
               <div
                 style={{ boxShadow: "0 0 8px 1px #00000022" }}
-                className="option absolute top-10 left-[-15px] rounded-lg w-36 h-0 overflow-hidden bg-white"
+                className="option absolute top-10 left-[15px] rounded-lg w-36 h-0 overflow-hidden bg-white"
               >
                 <a className="profile block mt-4 indent-8 text-[12px] text-right" href="#">
                   پروفایل

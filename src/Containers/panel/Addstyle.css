@@ -1,0 +1,17 @@
+.addsearch{
+    background: url("../../assets/images/search-gray.png") no-repeat;
+    background-position: 50% 50%;
+    background-size: 18px;
+}
+
+.filter{
+    background: url("../../assets/images/filter-filled-tool-symbol.png") no-repeat;
+    background-position: 10% 50%;
+    background-size: 17px;
+}
+
+.adduser{
+    background: url("../../assets/images/add-user.png") no-repeat;
+    background-position: 10% 50%;
+    background-size: 17px;
+}
