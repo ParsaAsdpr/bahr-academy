@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup"
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom";
 
 const FrontCard = (props) => {
 
@@ -11,11 +12,11 @@ const FrontCard = (props) => {
           .string()
           .min(3)
           .email("فرمت ایمیلی که وارد کرده اید اشتباه است")
-          .required("لطفا فیلد نام را پر کنید"),
+          .required("لطفا فیلد ایمیل را پر کنید"),
           logPassword: yup
           .string()
           .min(3, "رمز شما باید حدقال سه کارکتر داشته باشد")
-          .required("لطفا فیلد نام خانوادگی را پر کنید"),
+          .required("لطفا فیلد گذرواژه را پر کنید"),
       });
     
 
@@ -58,9 +59,9 @@ const FrontCard = (props) => {
             placeholder="گذرواژه"
           />
           <button type="submit">ورود</button>
-          <a className="flip" onClick={props.onFlip}>
+          <Link className="flip" to="/SignUp">
             حسابی نداری؟ ثبت نام کن
-          </a>
+          </Link>
         </form>
       </div>
     </div>

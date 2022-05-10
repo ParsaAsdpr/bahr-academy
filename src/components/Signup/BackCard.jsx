@@ -1,5 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
+import {Link} from 'react-router-dom'
 
 const BackCard = (props) => {
   const formik = useFormik({
@@ -47,9 +48,9 @@ const BackCard = (props) => {
             placeholder="تکرار گذرواژه"
           />
           <button type="submit">ثبت نام</button>
-          <a className="flip" onClick={props.onFlip}>
+          <Link className="flip" to="/SignIn">
             حسابی داری؟ وارد شو
-          </a>
+          </Link>
         </form>
       </div>
     </div>

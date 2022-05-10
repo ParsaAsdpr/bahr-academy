@@ -18,7 +18,7 @@ const Categories = props => {
             <div className='my-7'>
             <Title text="دسته بندی ها"></Title>
             </div>
-            <div className='grid grid-cols-4 gap-10'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-7'>
             {/* <div className='flex flex-row gap-x-10 justify-center'> */}
                 {categories.map((category, index) => (
                     <Category title={category.title} img={category.img} key={index}></Category>
