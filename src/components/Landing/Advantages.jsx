@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Title from "../common/Title";
 import resume from "../../assets/images/resume.svg";
 import deaf from "../../assets/images/deaf.svg";
 import cash from "../../assets/images/cash.svg";
 import Advantage from "../Advatnages/Advantage";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const boxVariant = {
+  visible: { opacity: 1, translateX: "0%", transition: { duration: 1 } },
+  hidden: { opacity: 0, translateX: "100%" },
+};
 
 const Advantages = (props) => {
   const [advantages] = useState([
@@ -24,9 +31,28 @@ const Advantages = (props) => {
     },
   ]);
 
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
-    <section className="flex justify-center max-w-7xl mx-auto flex-col px-5 my-16">
-      <Title text="مزایای آکادمی بحر" cName="text-center"></Title>
+    <motion.section
+      ref={ref}
+      variants={boxVariant}
+      initial="hidden"
+      animate={control}
+      className="flex justify-center flex-col px-5 my-16"
+    >
+      <div className="my-4">
+        <Title text="مزایای آکادمی بحر" cName="text-center"></Title>
+      </div>
       <div className="grid gap-5 grid-cols-1 md:grid-cols-3 mt-5">
         {advantages.map((advantage, index) => {
           return (
@@ -39,7 +65,7 @@ const Advantages = (props) => {
           );
         })}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

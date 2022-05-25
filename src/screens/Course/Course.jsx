@@ -9,6 +9,7 @@ import Comments from "../../components/common/Comments";
 import javascript from "../../assets/images/javascript.png";
 import Attachment from "../../components/common/Attachment";
 import {motion} from 'framer-motion';
+import ACBox from "../../components/common/ACbox";
 
 const Course = (props) => {
   const [course, setCourse] = useState({
@@ -59,10 +60,7 @@ const Course = (props) => {
     <motion.section initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} className="max-w-7xl mx-auto p-0 md:p-7 overflow-hidden">
       <div className="md:grid md:grid-cols-3 gap-x-8">
         <div className="grid grid-cols-1 gap-5 col-span-2">
-          <div
-            className="p-7 rounded-lg"
-            style={{ boxShadow: "0 0 15px 1px #00000022" }}
-          >
+          <ACBox>
             <MainCourse title={title} tags={tags} desc={desc}>
             <Attachment
           image={javascript}
@@ -70,19 +68,13 @@ const Course = (props) => {
           caption="تصویر جاوااسکریپت"
         ></Attachment>
             </MainCourse>
-          </div>
-          <div
-            className="p-7 rounded-lg"
-            style={{ boxShadow: "0 0 15px 1px #00000022" }}
-          >
+          </ACBox>
+          <ACBox>
             <Comments comments={comments}></Comments>
-          </div>
+          </ACBox>
         </div>
         <div className="grid grid-cols-1 mt-5 md:mt-0 auto-rows-min gap-5">
-          <div
-            className="px-16 py-7 md:p-7 rounded-lg"
-            style={{ boxShadow: "0 0 15px 1px #00000022" }}
-          >
+          <ACBox>
             <div className="mb-5">
               <Title text="تاریخ شروع دوره"></Title>
             </div>
@@ -92,27 +84,18 @@ const Course = (props) => {
               hour={hour}
               min={min}
             ></CourseInfo>
-          </div>
+          </ACBox>
 
-          <div
-            className="px-16 py-7 md:p-7 rounded-lg"
-            style={{ boxShadow: "0 0 15px 1px #00000022" }}
-          >
+          <ACBox>
             <Share></Share>
-          </div>
+          </ACBox>
 
-          <div
-            className="px-16 py-7 md:p-7 rounded-lg"
-            style={{ boxShadow: "0 0 15px 1px #00000022" }}
-          >
+          <ACBox>
             <Title text="مدرس این دوره"></Title>
             <CourseTutor></CourseTutor>
-          </div>
+          </ACBox>
 
-          <div
-            className="px-16 py-7 md:p-7 rounded-lg"
-            style={{ boxShadow: "0 0 15px 1px #00000022" }}
-          >
+          <ACBox>
             <Title text="فهرست ویدیو ها"></Title>
             <div className="flex flex-col my-4">
               {videos.map((video, index) => (
@@ -124,7 +107,7 @@ const Course = (props) => {
                 ></VideoListItem>
               ))}
             </div>
-          </div>
+          </ACBox>
         </div>
       </div>
     </motion.section>

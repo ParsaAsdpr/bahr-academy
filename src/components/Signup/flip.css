@@ -1,9 +1,12 @@
 .card-container * {
   box-sizing: border-box;
-  color: black;
 }
 *{
   font-family: irsans;
+}
+.error{
+  color: red;
+  border: 1px solid red;
 }
 .card-container button:focus {
   outline: none;
@@ -121,7 +124,7 @@
   font-size: 24pt;
   margin: 15px 0;
 }
-.deck p {
+.deck .par {
   color: #969696;
   font-size: 10.4pt;
   margin: 20px 0;
@@ -180,7 +183,7 @@
     font-size: 18pt;
     margin: 10px 0;
   }
-  .deck p {
+  .deck .par {
     font-size: 8pt;
     margin: 10px 0;
     line-height: 20px;
@@ -218,7 +221,7 @@
   .deck h2 {
     font-size: 16pt;
   }
-  .deck p {
+  .deck .par {
     font-size: 7.5pt;
   }
   .deck input {

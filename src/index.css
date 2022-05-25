@@ -1,3 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+  .slick-prev:before,
+.slick-next:before {
+  color: rgb(174, 174, 174);
+  font-size: 17pt;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+  background-color: cornflowerblue;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+.rcw-conversation-container > .rcw-header{
+  display: flex;
+  justify-content: right;
+  text-align: right;
+  background: linear-gradient(to right, #1762bd, #2993ff);
+}
+div > .rcw-launcher{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2993ff;
+}
+.rcw-sender{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div > .rcw-response .rcw-message-text, .rcw-client .rcw-message-text{
+  text-align: right;
+  direction: rtl;
+  font-size: 10pt;
+}
+.rcw-conversation-container > .rcw-header > .rcw-title {
+  font-size: 15pt;
+}
+.rcw-conversation-container > .rcw-header > span {
+  font-size: 10pt;
+}
+div > .rcw-new-message{
+  font-size: 10pt;
+  max-width: 300px;
+  text-align: right;
+  direction: rtl;
+}

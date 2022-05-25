@@ -2,6 +2,7 @@ import React from "react";
 import SearchBox from "./SearchBox";
 import Filter from "./Filter";
 import SortButton from "./SortDropdown";
+import FilterModal from "./FilterModal";
 
 const PageContainer = (props) => {
   return (
@@ -12,7 +13,7 @@ const PageContainer = (props) => {
           <SearchBox placeholder="جستجو..."></SearchBox>
         </div>
         <div className="md:col-span-2 col-span-6">
-          <Filter onFilter={props.onFilter}></Filter>
+          <FilterModal></FilterModal>
         </div>
 
         <div className="col-span-6">

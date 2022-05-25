@@ -3,6 +3,7 @@ import Style from './AcadenyStats.module.css';
 import tutor from '../../assets/images/teacher.svg'
 import student from '../../assets/images/student.svg'
 import certification from '../../assets/images/resume.svg'
+import PN from "persian-number";
 
 const AcademyStats = props => {
     const [stats, setStats] = useState([
@@ -17,8 +18,8 @@ const AcademyStats = props => {
                     {stats.map((stat, index) => (
                         <div className='flex flex-col gap-1 sm:gap-3 md:gap-5' key={index}>
                             <img src={stat.icon} alt="" className='w-14 sm:w-20 md:w-28'/>
-                            <h3 className='text-white text-center text-sm sm:text-md md:text-xl'>{stat.title}</h3>
-                            <p className='text-white text-center text-sm sm:text-md md:text-xl'>{stat.value.toLocaleString()}</p>
+                            <h3 className='text-white text-center text-sm sm:text-md md:text-lg'>{stat.title}</h3>
+                            <p className='text-white text-center text-sm sm:text-md md:text-lg'>{PN.convertEnToPe(stat.value.toLocaleString())}</p>
                         </div>
                     ))}
                 </div>

@@ -8,6 +8,7 @@ import Logo from "../Navbar/Logo";
 import MobileSign from "./MobileSign";
 import { RiCloseFill, RiMenu3Line} from "react-icons/ri"
 
+
 const Navbar = props => {
   const [ MenuItems, setMenuItems] = useState( [
     { title: "دوره ها", url: "Courses", cName: "nav-links" },
@@ -22,7 +23,7 @@ const Navbar = props => {
   };
 
   return ( 
-  <header className="shadow-md">
+  <header className="shadow-md fixed top-0 w-full z-50">
     <nav className="NavbarItems">
       <div className="cont">
           <MobileSign></MobileSign>

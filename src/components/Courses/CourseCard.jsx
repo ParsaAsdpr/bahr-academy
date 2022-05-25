@@ -6,9 +6,7 @@ import "./Courses.css"
 const CourseCard = (props) => {
   return (
     <div
-      className="rounded-2xl overflow-hidden"
-      style={{ boxShadow: "0 0 20px 1px #0000001e" }}
-    >
+      className="rounded-2xl overflow-hidden mx-2 shadow-xl">
       <div className="pt-4 pb-5 flex items-center justify-center h-1/3">
         <img src={props.image} className="w-24 h-24" alt="" />
       </div>

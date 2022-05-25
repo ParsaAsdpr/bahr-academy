@@ -1,6 +1,10 @@
 import React from "react";
 import avatar from "../../assets/images/guest.png"
-import "./navbar.css"
+import "./navbar.css";
+import UserContext from "../../core/utils/UserContext";
+import LoggedContext from "../../core/utils/LoggedContext";
+
+
 
 const MobileSign = props => {
     return ( 

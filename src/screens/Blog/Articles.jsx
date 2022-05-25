@@ -20,8 +20,8 @@ const Articles = () => {
 
   const getData = async () => {
     try {
-      await axios.get("https://jsonplaceholder.ir/posts").then((res) => {
-        setArticles(res.data); // ***write catch function to catch error
+      await axios.get(`https://jsonplaceholder.ir/posts?page=0&results=10`).then((res) => {
+        console.log(res.data); // ***write catch function to catch error
       });
       setLoading(true);
     } catch (err) {
