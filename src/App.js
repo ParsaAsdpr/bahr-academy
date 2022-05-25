@@ -13,13 +13,14 @@ import { CourseCard } from './components/Courses/CourseCard';
 import Dashboard from './components/panel/Dasboard';
 import Header_panel from './components/panel/Header_panel';
 import Add_user from './Containers/panel/Add_user';
+import Home from './Containers/panel/Home';
 
 
 
 function App() {
   return (
     <div dir='rtl'>
-      <Add_user></Add_user>
+      <Home></Home>
     </div>
   );
 }
