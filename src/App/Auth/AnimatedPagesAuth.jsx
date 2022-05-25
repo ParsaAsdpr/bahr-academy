@@ -8,6 +8,7 @@ import Course from "../../screens/Course/Course";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Courses from "../../screens/Course/Courses.jsx";
 import {AnimatePresence} from 'framer-motion';
+import Add_user from "../../Containers/panel/Add_user" 
 
 
 const AnimatedPages = () => {
@@ -23,6 +24,7 @@ const AnimatedPages = () => {
         <Route path="Signup" element={<Signup />} />
         <Route path="SignIn" element={<Signup />} />
         <Route path="Courses" element={<Courses />} />
+        <Route path="Panel" element={<Add_user />} />
         <Route path="Course/:id" element={<Course />} />
       </Routes>
         </AnimatePresence>
