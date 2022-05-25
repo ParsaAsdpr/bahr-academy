@@ -12,7 +12,6 @@ import H from "../../screens/H";
 import Home from "../../Containers/panel/Home";
 import Add_user from "../../Containers/panel/Add_user";
 
-
 const AnimatedPages = () => {
     const location = useLocation();
   return (
@@ -26,6 +25,7 @@ const AnimatedPages = () => {
         <Route path="Signup" element={<Signup />} />
         <Route path="SignIn" element={<Signup />} />
         <Route path="Courses" element={<Courses />} />
+        <Route path="Panel" element={<Add_user />} />
         <Route path="Course/:id" element={<Course />} />
         <Route path="Test" element={<H />} />
         <Route path="dashboard" element={<Add_user />} />
