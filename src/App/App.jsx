@@ -5,7 +5,7 @@ import UnAuthApp from "./UnAuth/UnAuthApp";
 import LoggedContext from "../core/utils/LoggedContext";
 
 function App() {
-  const isLogged = false;
+  const isLogged = true;
 
   return isLogged ? (
     <LoggedContext.Provider value={isLogged}>

@@ -1,0 +1,31 @@
+.content:checked ~ .item{
+    height: 60px;
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.content{
+    display: none;
+}
+
+.content:checked + .label{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.arrow{
+    background: url('../../assets/images/next.png') no-repeat;
+    background-size: 22px;
+    background-position: 10% 80%;
+    transform: rotate(180deg);
+}
+
+.content:checked + .arrow{
+    transform: rotate(90deg);
+}
+
+.link{
+    background: url("../../assets/images/circle1.png") no-repeat;
+    background-position: 85% 50%;
+    background-size: 10px;
+
+}
