@@ -1,12 +1,11 @@
 import React from "react";
-import { HiArrowNarrowLeft } from 'react-icons/hi';
+import { HiArrowNarrowLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import "./Courses.css"
+import "./Courses.css";
 
 const CourseCard = (props) => {
   return (
-    <div
-      className="rounded-2xl overflow-hidden mx-2 shadow-xl">
+    <div dir="rtl" className="rounded-2xl overflow-hidden mx-2 shadow-xl">
       <div className="pt-4 pb-5 flex items-center justify-center h-1/3">
         <img src={props.image} className="w-24 h-24" alt="" />
       </div>
@@ -34,7 +33,10 @@ const CourseCard = (props) => {
         <p className=" md:leading-7 leading-7 text-xs opacity-80 text-white py-4 overflow-ellipsis overflow-hidden h-40">
           {props.desc}
         </p>
-        <Link to={`/Course/${props.id}`} className="text-white text-sm block overflow-hidden relative cursor-pointer transition-all registerCourse">
+        <Link
+          to={`/Course/${props.id}`}
+          className="text-white text-sm block overflow-hidden relative cursor-pointer transition-all registerCourse"
+        >
           مشاهده دوره و ثبت نام
           <HiArrowNarrowLeft className="px-2" />
         </Link>

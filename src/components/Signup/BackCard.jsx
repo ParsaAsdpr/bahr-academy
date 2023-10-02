@@ -2,8 +2,9 @@ import React from "react";
 import { useFormik } from "formik";
 import {Link} from 'react-router-dom'
 import { TextBox } from "../common/Input";
+import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
-
+import LoginUser from "../../core/services/api/auth/Login.api";
 
 const BackCard = (props) => {
   const Validate = yup.object().shape({
@@ -20,8 +21,10 @@ const BackCard = (props) => {
       .string("رمز عبور باید به صورت انگلیسی باشد")
       .min(3, "رمز شما باید حدقال سه کارکتر داشته باشد")
       .required("لطفا فیلد گذرواژه را پر کنید"),
-      
   });
+
+  const history = useNavigate();
+
   const formik = useFormik({
     initialValues: {
         signEmail: "",
@@ -29,8 +32,19 @@ const BackCard = (props) => {
       repSignPassword: "",
     },
     validationSchema: Validate,
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit:  async (values) => {
+      const userLogin = {
+        email: values.email,
+        password: values.password,
+      };
+  
+      const result = await LoginUser(userLogin);
+      setTimeout(() => {
+        {
+          result && history.push("/");
+          window.location.reload(true);
+        }
+      }, 2500);
     },
   });
 

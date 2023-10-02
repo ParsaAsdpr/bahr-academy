@@ -9,6 +9,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Courses from "../../screens/Course/Courses.jsx";
 import {AnimatePresence} from 'framer-motion';
 import H from "../../screens/H";
+import AboutUs from "../../screens/AboutUs/AboutUs";
+import TutorsPage from "../../screens/Tutors/TutorsPage";
 
 
 const AnimatedPages = () => {
@@ -19,13 +21,15 @@ const AnimatedPages = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Landing />} />
-        <Route path="Articles" element={<Articles />} />
-        <Route path="Article/:id" element={<Article />} />
-        <Route path="SignUp" element={<Signup />} />
-        <Route path="SignIn" element={<Signup />} />
-        <Route path="Courses" element={<Courses />} />
-        <Route path="Course/:id" element={<Course />} />
-        <Route path="Test" element={<H />} />
+        <Route path="articles" element={<Articles />} />
+        <Route path="article/:id" element={<Article />} />
+        <Route path="signUp" element={<Signup />} />
+        <Route path="signIn" element={<Signup />} />
+        <Route path="courses" element={<Courses />} />
+        <Route path="course/:id" element={<Course />} />
+        <Route path="test" element={<H />} />
+        <Route path="about" element={<AboutUs />} />
+        <Route path="tutors" element={<TutorsPage />} />
       </Routes>
         </AnimatePresence>
     </div>

@@ -8,16 +8,16 @@ const CourseInfo = (props) => {
         <Clock></Clock>
       </div>
       <div className="w-full flex flex-row justify-between className py-3">
-        <p className="text-sm text-stone-900">قیمت دوره</p>
-        <p className="text-green-500 text-sm">{props.price} تومان</p>
+        <p className="text-xs sm:text-sm text-stone-900">قیمت دوره</p>
+        <p className="text-green-500 text-xs sm:text-sm">{props.price} تومان</p>
       </div>
       <div className="w-full flex flex-row justify-between className py-3">
-        <p className="text-sm text-stone-900">تعداد دانشجویان</p>
-        <p className="text-stone-700 text-sm">{props.students} نفر</p>
+        <p className="text-xs sm:text-sm text-stone-900">تعداد دانشجویان</p>
+        <p className="text-stone-700 text-xs sm:text-sm">{props.students} نفر</p>
       </div>
       <div className="w-full flex flex-row justify-between className py-3">
-        <p className="text-sm text-stone-900">مدت زمان دوره</p>
-        <p className="text-stone-700 text-sm">
+        <p className="text-xs sm:text-sm text-stone-900">مدت زمان دوره</p>
+        <p className="text-stone-700 text-xs sm:text-sm">
           {props.hour} ساعت و {props.min} دقیقه
         </p>
       </div>

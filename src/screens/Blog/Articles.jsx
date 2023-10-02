@@ -2,69 +2,77 @@ import React, { useEffect, useState } from "react";
 import ArticleCard from "../../components/Blog/ArticleCard";
 import PageContainer from "../../components/common/PageContainer";
 import { motion } from "framer-motion";
-import axios from "axios";
-import blog from "../../assets/images/blog.png";
 import ReactLoading from "react-loading";
+import { GetAllBlogsData } from "../../core/services/api/blog/getAllBlogs.api";
+import { paginate } from "../../core/utils/paginate";
+import Pagination from "../../components/common/Pagination";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    getData();
-  }, []);
   const [items, setItems] = useState([
     { text: "محبوب ترین ها", url: "#" },
     { text: "جدیدترین ها", url: "#" },
   ]);
 
-  const getData = async () => {
-    try {
-      await axios.get(`https://jsonplaceholder.ir/posts?page=0&results=10`).then((res) => {
-        console.log(res.data); // ***write catch function to catch error
-      });
-      setLoading(true);
-    } catch (err) {
-      console.log(err);
-    }
+  const [allBlogsData, setAllBlogsData] = useState([]);
+  const [loadingForBlogs, setLoadingForBlogs] = useState(false);
+  const [pageSize] = useState(12);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const GetAllBlogs = async () => {
+    const result = await GetAllBlogsData();
+    setAllBlogsData(result);
+    setLoadingForBlogs(true);
+  };
+  useEffect(() => {
+    GetAllBlogs();
+  }, []);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
 
-  const [noOfElements, setnoOfElements] = useState(8);
-
-  const sliceArray = articles.slice(0, noOfElements);
-
-  const loadMore = () => {
-    setnoOfElements(noOfElements + 8);
-  };
+  const paginatedBlogs = paginate(allBlogsData, currentPage, pageSize);
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      className="mt-16"
     >
-      <PageContainer items={items} title="دوره های آموزشی">
-        {loading ? (
-          sliceArray.map((item, index) => {
+      <PageContainer items={items} title="مقاله ها" >
+        {loadingForBlogs ? (
+          paginatedBlogs.map((item, index) => {
             return (
-              <ArticleCard
-                title={item.title}
-                desc={item.body}
-                image={blog}
-                key={index}
-                id={item.id}
-              ></ArticleCard>
+              <>
+                <ArticleCard
+                  title={item[1].title}
+                  desc={item[1].body}
+                  image={item[1].image}
+                  key={index}
+                  id={item[1]._id}
+                ></ArticleCard>
+
+                <Pagination
+                  itemsCount={Object.keys(allBlogsData).length}
+                  pageSize={pageSize}
+                  currentPage={currentPage}
+                  onPageChange={handlePageChange}
+                />
+              </>
             );
           })
         ) : (
-          <ReactLoading type="spin" height="100px" width="100px" color="#6366f1" className="col-span-4 mx-auto my-20"></ReactLoading>
+          <ReactLoading
+            type="spin"
+            height="100px"
+            width="100px"
+            color="#6366f1"
+            className="col-span-4 mx-auto my-20"
+          ></ReactLoading>
         )}
-        <button
-          onClick={() => loadMore()}
-          className="text-stone-600 border-stone-500 col-span-4 border-2 rounded-md py-4 hover:text-white hover:bg-stone-500 transition"
-        >
-          بیشتر...
-        </button>
       </PageContainer>
     </motion.div>
   );

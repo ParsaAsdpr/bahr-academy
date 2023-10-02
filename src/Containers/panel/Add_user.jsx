@@ -68,7 +68,7 @@ class Add_user extends Component {
           <div className="w-[90%] h-96 mt-16">
             <div className="flex">
               <input
-                className="border border-[#CBCBCB] w-[580px] rounded-[10px] h-9 text-[12px] indent-2 bg-[#eeeeee] text-black active::border-none"
+                className="border border-[#CBCBCB] w-full rounded-lg h-9 text-[12px] indent-2 bg-[#eeeeee] text-black active::border-none"
                 placeholder="جستجوی همه ی کاربران ..."
                 type="text"
               />

@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import "./Dstyle.css";
-import salar from "../../assets/images/salar.jpg";
 import user from "../../assets/images/usere.png";
 import next from "../../assets/images/next.png";
 import circle from "../../assets/images/circle.png";
 
 class Dashboard extends Component {
   state = {
-    avatar: salar,
+    avatar: '/salar.jpg',
     user: user,
     arrow: next,
     circle: circle,

@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import Dashboard from "./Dashboard";
 import "./Hstyle.css";
-import salar from "../../assets/images/salar.jpg";
 class Header_panel extends Component {
   state = {
-    user: salar,
+    user: 'salar.jpg',
   };
   render() {
     return (

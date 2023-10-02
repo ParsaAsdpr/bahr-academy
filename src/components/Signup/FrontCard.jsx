@@ -3,8 +3,13 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import { Link } from "react-router-dom";
 import { TextBox } from "../common/Input";
+import RegisterUser from "../../core/services/api/auth/Login.api";
+import { useNavigate } from "react-router-dom";
 
 const FrontCard = (props) => {
+
+  const history = useNavigate();
+
   const Validate = yup.object().shape({
     logEmail: yup
       .string("ایمیل باید به صورت انگلیسی باشد")
@@ -23,8 +28,21 @@ const FrontCard = (props) => {
       logPassword: "",
     },
     validationSchema: Validate,
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: async (values) => {
+      const userRegister = {
+        fullName: values.fullName,
+        password: values.password,
+        email: values.email,
+        phoneNumber: values.phoneNumber,
+        birthDate: values.birthDate,
+        nationalId: values.nationalId,
+      };
+      const result = await RegisterUser(userRegister);
+      setTimeout(() => {
+        {
+          result && history.push("/login");
+        }
+      }, 3000);
     },
   });
 
@@ -33,6 +51,8 @@ const FrontCard = (props) => {
       <div className="card-container">
         <form onSubmit={formik.handleSubmit}>
           <h2>ورود</h2>
+          {/* <p className="text-red-500 text-xs text-right">{formik.errors.logEmail}</p> */}
+          <p className="text-red-500 text-xs text-right">{formik.errors.logPassword}</p>
           <p className="par">
             نام کاربری و گذرواژه خود را وارد کنید و بر روی دکمه ورود کلیک کنید
             تا وارد شوید

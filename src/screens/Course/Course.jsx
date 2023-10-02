@@ -57,7 +57,7 @@ const Course = (props) => {
   const min = course.duration.split(":")[1];
   const { tags, comments, desc, title, videos } = course;
   return (
-    <motion.section initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} className="max-w-7xl mx-auto p-0 md:p-7 overflow-hidden">
+    <motion.section initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} className="max-w-7xl mt-16 mx-auto p-0 md:p-7 overflow-hidden">
       <div className="md:grid md:grid-cols-3 gap-x-8">
         <div className="grid grid-cols-1 gap-5 col-span-2">
           <ACBox>

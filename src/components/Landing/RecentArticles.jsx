@@ -1,37 +1,16 @@
 import React, { useState, useEffect } from "react";
-import articlePic from "../../assets/images/blog.png";
 import ArticleCard from "../../components/Blog/ArticleCard";
 import Title from "../../components/common/Title";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+import articles from "../../constants/articles.json"
+
 const boxVariant = {
-  visible: { opacity: 1, translateX: "0%", transition: { duration: 1 } },
-  hidden: { opacity: 0, translateX: "-100%" },
+  visible: { opacity: 1, translateY: "0%", transition: { duration: 1 } },
+  hidden: { opacity: 0, translateY: "50%" },
 };
 const RecentArticles = (props) => {
-  const [articles] = useState([
-    {
-      title: "لورم ایپسوم متن ساخت",
-      desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت",
-      image: articlePic,
-    },
-    {
-      title: "لورم ایپسوم متن ساخت",
-      desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت",
-      image: articlePic,
-    },
-    {
-      title: "لورم ایپسوم متن ساخت",
-      desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت",
-      image: articlePic,
-    },
-    {
-      title: "لورم ایپسوم متن ساخت",
-      desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت",
-      image: articlePic,
-    },
-  ]);
 
   const control = useAnimation();
   const [ref, inView] = useInView();

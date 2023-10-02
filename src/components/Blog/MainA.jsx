@@ -15,7 +15,7 @@ const MainArticle = props => {
     return ( 
         <main>
         <div className="w-full overflow-hidden max-h-96 rounded-md">
-          <img className="w-full object-cover" src={javascript} alt="cover" />
+          <img className="w-full object-cover" src={props.image} alt="cover" />
         </div>
         <div className="my-6">
           <h5 className="text-md text-stone-700">برچسب ها</h5>

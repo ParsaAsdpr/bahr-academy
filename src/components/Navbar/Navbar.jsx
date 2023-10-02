@@ -11,10 +11,10 @@ import { RiCloseFill, RiMenu3Line} from "react-icons/ri"
 
 const Navbar = props => {
   const [ MenuItems, setMenuItems] = useState( [
-    { title: "دوره ها", url: "Courses", cName: "nav-links" },
-    { title: "مدرسین", url: "Tutors", cName: "nav-links" },
-    { title: "بلاگ", url: "Articles", cName: "nav-links" },
-    { title: "تماس با ما", url: "ContactUs", cName: "nav-links" },
+    { title: "دوره ها", url: "courses", cName: "nav-links" },
+    { title: "مدرسین", url: "tutors", cName: "nav-links" },
+    { title: "بلاگ", url: "articles", cName: "nav-links" },
+    { title: "درباره ما", url: "about", cName: "nav-links" },
   ]);
   const [clicked, setClicked] = useState(false);
 

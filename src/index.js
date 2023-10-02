@@ -5,6 +5,7 @@ import App from './App/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import "slick-carousel/slick/slick"
+import "leaflet/dist/leaflet.css"
 
 ReactDOM.render(
   <BrowserRouter>
